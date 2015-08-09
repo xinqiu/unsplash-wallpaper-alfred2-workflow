@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>me.xinqiu.wallpaper</string>
+	<key>connections</key>
+	<dict/>
+	<key>createdby</key>
+	<string>Xin Qiu</string>
+	<key>description</key>
+	<string>Change Wallpaper from unsplash</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Unsplash Wallpaper</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>cw</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Please Wait...</string>
+				<key>script</key>
+				<string>mkdir -p ~/Pictures/Wallpapers/unsplash
+cd ~/Pictures/Wallpapers/.unsplash/
+curl -o image.png "https://unsplash.it/2560/1600/?random"
+osascript -e "tell application \"System Events\" to set picture of every desktop to \"~/Pictures/Wallpapers/.unsplash/image.png\""</string>
+				<key>title</key>
+				<string>Change Wallpaper</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>3F9A4A18-89D8-4FD9-AF45-E06E005AD94F</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>使用cw来change wallpaper
+下载的图片保存在~/Pictures/Wallpapers/unsplash
+可能是国内访问速度慢，延迟比较大。</string>
+	<key>uidata</key>
+	<dict>
+		<key>3F9A4A18-89D8-4FD9-AF45-E06E005AD94F</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://xinqiu.me</string>
+</dict>
+</plist>
